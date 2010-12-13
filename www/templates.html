@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+
+  <!-- www.phpied.com/conditional-comments-block-downloads/ -->
+  <!--[if IE]><![endif]-->
+
+  <title>jQuery Template Demo</title>
+  <meta name="description" content="jQuery Templates Demo">
+  <meta name="author" content="Rebecca Murphey">
+
+  <!-- CSS : implied media="all" -->
+  <link rel="stylesheet" href="css/style.css?v=1">
+
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+      <h1>jQuery Template Demo</h1>
+    </header>
+    
+    <div id="main">
+      <ul id="myList"></ul>
+    </div>
+    
+  </div> <!--! end of #container -->
+
+
+  <!-- Javascript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+  <script src="js/lib/jquery-1.4.4.js"></script>
+
+  <script src="js/lib/jquery.tmpl.js"></script>
+  <script src="js/examples/templating.js"></script>
+
+  <script type="text/x-jquery-tmpl" id="nameTemplate">
+    <li>
+      <img src="img/${img}" alt="${first} ${last}" />
+      ${first} ${last}
+    </li>
+  </script>
+
+</body>
+</html>
