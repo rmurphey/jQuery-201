@@ -1,0 +1,59 @@
+body {
+  width: 600px;
+  font-family:Helvetica, Arial, sans-serif;
+}
+
+.selected {
+  font-weight:bold;
+}
+
+.portlet {
+  background-color:#cdc;
+  padding:10px;
+  margin:0 0 10px 0;
+  -webkit-border-radius:10px;
+}
+
+.portlet nav {
+  overflow:hidden;
+}
+
+.portlet nav li {
+  list-style-type:none;
+  float:left;
+  cursor:pointer;
+  padding:5px;
+}
+
+.portlet nav li:hover {
+  -webkit-border-radius:5px;
+  background-color:#fff;
+}
+
+.portlet.favorite {
+  background-color:magenta;
+}
+
+.portlet section {
+  margin:10px 0 0 0;
+}
+
+.portlet li.open {
+  display:none;
+}
+
+.portlet.closed li.open {
+  display:block;
+}
+
+.portlet.closed li.close {
+  display:none;
+}
+
+.portlet.favorite li.favorite {
+  display:none;
+}
+
+.portlet.closed .content {
+  display:none;
+}
