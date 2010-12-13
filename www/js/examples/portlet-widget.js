@@ -24,6 +24,16 @@ $.widget('my.portlet', {
     }, this));
   },
 
+  open : function() {
+    this.element.removeClass('closed');
+    this._trigger('opened');
+  },
+
+  close : function() {
+    this.element.addClass('closed');
+    this._trigger('closed');
+  },
+
   _setOption : function(key, val) {
     if (key == 'favorite') {
       if (val) { 
@@ -35,8 +45,7 @@ $.widget('my.portlet', {
     }
 
     if (key == 'open') {
-      this.element[val ? 'removeClass' : 'addClass']('closed');
-      this._trigger(val ? 'opened' : 'closed', {}, { portletElement : this.element });
+      this[val ? 'open' : 'close']();
       return;
     }
   },
@@ -45,7 +54,6 @@ $.widget('my.portlet', {
     this.element.addClass('favorite');
     $.publish('/portlet/favorite', [ this.id ]);
   }
-
 });
 
 $(function() { 
