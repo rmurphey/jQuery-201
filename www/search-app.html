@@ -1,0 +1,47 @@
+<!doctype html>  
+
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>jQuery 201: My Amazing Application</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/search-app.css">
+
+</head>
+
+<body class="search-app">
+
+  <div id="container">
+    <div id="messaging"></div>
+
+    <h1>My Amazing Application</h1>
+
+    <form action="/search" method="get" id="search">
+      <label for="q">Enter your search</label>
+      <input name="q" type="search">
+      <input type="submit" value="Search">
+    </form>
+
+    <ul id="searches"></ul>
+    <ul id="results"></ul>
+
+  </div> <!--! end of #container -->
+
+  <script src="js/lib/requireplugins-jquery-1.4.4.js"></script>
+
+  <script type="text/javascript" charset="utf-8">
+    require([
+        'js/lib/jquery-ui-1.8.6/ui/jquery-ui.js',
+        'js/lib/jquery-ui-1.8.6/ui/jquery.ui.widget.js',
+        'js/lib/jquery.tmpl.js'
+      ], function() {
+      require(['js/exercises/app.js'], function(init) {
+        $(init);
+      });
+    });
+  </script>
+  
+</body>
+</html>

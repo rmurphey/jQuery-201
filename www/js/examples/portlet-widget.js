@@ -1,6 +1,5 @@
 $.widget('my.portlet', {
   widgetEventPrefix : 'portlet-',
-  portlets : [],
 
   _create : function() {
     this.id = this.element.attr('data-id');
@@ -48,6 +47,9 @@ $.widget('my.portlet', {
       this[val ? 'open' : 'close']();
       return;
     }
+
+    // call the inherited method
+    $.Widget.prototype._setOption.apply(this, arguments);
   },
 
   _favorite : function() {

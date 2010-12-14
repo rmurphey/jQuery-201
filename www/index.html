@@ -17,11 +17,25 @@
 
   <div id="container">
     <header></header>
-    <div id="main"></div>
+    <div id="main">
+      <input type="button" id="clickme" value="click me">
+    </div>
     <footer></footer>
   </div> <!--! end of #container -->
 
   <script src="js/lib/jquery-1.4.4.js"></script>
+  <script>
+    $(function() {
+      var foo = {
+        bar : 'baz',
+        fn : function() {
+          console.log(this.bar);
+        }
+      };
+
+      $('#clickme').click($.proxy(foo.fn, foo));
+    });
+  </script>
   
 </body>
 </html>
