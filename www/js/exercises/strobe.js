@@ -1,6 +1,6 @@
 /**
  * TASK: Write a widget using the jQuery UI widget factory that
- * enables the strobe div below to act as a "light" with a strobe
+ * enables an element to act as a light with a strobe
  * mode. The widget should provide a way to turn the light on
  * and off, and to interrogate the light as to whether it is on 
  * or off. Additionally, it should be possible to put the light
@@ -12,6 +12,7 @@
  *
  * See www/strobe.html for the markup.
  */
+
 $.widget('my.strobe', {
   _create : function() {
 
